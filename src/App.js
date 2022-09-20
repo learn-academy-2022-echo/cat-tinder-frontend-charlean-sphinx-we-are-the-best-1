@@ -10,24 +10,36 @@ import CatEdit from './pages/CatEdit'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 import { Routes, Route } from "react-router-dom"
+import cats from './mockCats.js'
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import Navbar from './components/Header'
 
-
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600;800&display=swap" rel="stylesheet"/>
 
 
 const App = () => {
+//   const [cats, setCats] = useState(mockCats)
+
+  console.log(cats)
   return (
+
   <>
+   
     <Header />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/catindex" element={<CatIndex />} />
-      <Route path="/catshow" element={<CatShow />} />
-      <Route path="/catnew" element={<CatNew />} />
-      <Route path="/catedit" element={<CatEdit />} />
-      <Route path="/*" element={<NotFound />} />
-    </Routes>
+
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/catindex" element={<CatIndex />} />
+        <Route path="/catshow" element={<CatShow />} />
+        <Route path="/catnew" element={<CatNew />} />
+        <Route path="/catedit" element={<CatEdit />} />
+        <Route path="/*" element={<NotFound />} />
+      </Routes>
+
     <Footer />
   </>
+
 )
 }
 

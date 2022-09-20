@@ -1,3 +1,46 @@
+:root {
+--ff--primary: 'Amiri', serif;
+--ff-secondary: 'Cinzel', serif;
+--ff-third: 'Cinzel Decorative', cursive;
+
+--fw-reg: 300;
+--fw-bold: 900;
+
+--clr-light: rgb(121, 94, 94);
+--clr-dark: #2f2626;
+--clr-accent:rgba(203, 160, 5, 0.936);
+
+--fs-h1: 5rem;
+--fs-h2: 2.25rem;
+--fs-h3: 1.25rem;
+--fs-body: 1rem;
+
+--bs: 0.25em 0.25em 0.75em rgba(101, 80, 4, 0.804),
+0.125em 0.125em 0.25em rgba(91, 71, 0, 0.936);
+}
+
+/*General styles */
+
+.app-body{
+  background: var(--clr-dark);
+  color: var(--clr-accent);
+  margin: 0;
+  font-family: var(--ff-third);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h1);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.div-not-found {
+  width: 100%;
+  height: 800px;
+}
+
+
 .App {
   text-align: center;
 }
@@ -35,4 +78,23 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+footer {
+  border-top: 5px solid yellow;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color:#d3d2c5;
+  background-color: #282503;    
+  /* max-width:1200px;
+  width:95%;
+  background-image: url(../photos/footer.png); */
+}
+
+.max-height {
+  margin-top: 0 auto;
+  max-height: 400px;
 }
