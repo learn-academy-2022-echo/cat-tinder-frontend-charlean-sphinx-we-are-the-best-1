@@ -96,3 +96,12 @@ footer {
   margin-top: 0 auto;
   max-height: 400px;
 }
+.card {
+  margin: 2rem 0;
+}
+
+.cat-index-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
