@@ -4,7 +4,7 @@ const NotFound = () => {
   return (
     <div className='app-body'>
     <h1>Missing Mummy</h1>
-    <img src="photos/dempty.png"/>
+    <img src="photos/dempty.png" alt="empty sarcophaugus"/>
     <h2>Please go somewhere else</h2>
     </div>
   )
