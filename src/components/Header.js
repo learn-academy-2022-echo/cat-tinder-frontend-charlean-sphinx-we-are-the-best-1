@@ -18,9 +18,12 @@ function NavbarComp(args) {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   return (
-    <div>
+    <div className='headercolors'>
       <Navbar {...args}>
-        <NavbarBrand className="app-body" href="/">Mummy Tinder</NavbarBrand>
+      <div>
+      </div>
+      <appname className="headertext">Mummy Tinder</appname>
+        {/* <NavbarBrand className="app-body" href="/">Mummy Tinder</NavbarBrand> */}
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>

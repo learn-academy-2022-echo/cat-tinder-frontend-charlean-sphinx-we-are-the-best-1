@@ -14,13 +14,82 @@
 --fs-h2: 2.25rem;
 --fs-h3: 1.25rem;
 --fs-body: 1rem;
-
---bs: 0.25em 0.25em 0.75em rgba(101, 80, 4, 0.804),
-0.125em 0.125em 0.25em rgba(91, 71, 0, 0.936);
+}
+/* General styles */ 
+* {
+  margin: 0;
+  padding: 0;
+  background-color: var(--clr-dark);
+  color: var(--clr-accent);
+}
+img{
+  max-width: 100%;
+  max-height:100%;
+  bottom:0;
+}
+.sub-div{
+  top:50px;
+  bottom: 0px;
+}
+/* header section */
+.headercolors{
+  background-color: var(--clr-dark);
+  color: var(--clr-accent);
 }
 
-/*General styles */
+.headertext {
+  font-family: var(--ff-third);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h1);
+}
 
+/* footer */
+footer {
+  border-top: 5px solid var(--clr-accent);
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color:#d3d2c5;
+  background-color: #282503;    
+}
+
+/*pages */
+.bodycolors {
+  background-color: var(--clr-dark);
+  color: var(--clr-accent);
+}
+
+.page-body {
+  text-align: center;
+  margin: 0rem;
+  height: 100%;
+}
+
+.bodypartscenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.max-height {
+  margin-top: 0 auto;
+  max-height: 400px;
+}
+.card {
+  margin: 2rem 0;
+}
+
+.cat-index-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* 
 .app-body{
   background: var(--clr-dark);
   color: var(--clr-accent);
@@ -54,8 +123,8 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
+} */
+/* 
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -65,7 +134,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
@@ -80,28 +149,8 @@
   }
 }
 
-footer {
-  border-top: 5px solid yellow;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  color:#d3d2c5;
-  background-color: #282503;    
 
-}
 
-.max-height {
-  margin-top: 0 auto;
-  max-height: 400px;
-}
-.card {
-  margin: 2rem 0;
-}
 
-.cat-index-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+
+/* austins */

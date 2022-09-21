@@ -18,8 +18,8 @@ import cats from './mockCats.js'
 
 const App = () => {
 
-  const [cats, setCats] = useState(mockCats)
-  console.log(cats)
+  // const [cats, setCats] = useState(mockCats)
+  // console.log(cats)
   return (
     <>
       <Header />
