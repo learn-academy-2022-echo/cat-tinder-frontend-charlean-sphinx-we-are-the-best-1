@@ -1,5 +1,4 @@
-import React from 'react'
-import logo from './logo.svg';
+import React, { useState } from 'react'
 import './App.css';
 import Footer from './components/Footer'
 import Header from './components/Header'
@@ -10,16 +9,12 @@ import CatEdit from './pages/CatEdit'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 import { Routes, Route } from "react-router-dom"
-import cats from './mockCats.js'
-
-
+import mockCats from './mockCats.js'
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600;800&display=swap" rel="stylesheet"/>
-
 
 const App = () => {
 
-  // const [cats, setCats] = useState(mockCats)
-  // console.log(cats)
+  const [cats, setCats] = useState(mockCats)
   return (
     <>
       <Header />

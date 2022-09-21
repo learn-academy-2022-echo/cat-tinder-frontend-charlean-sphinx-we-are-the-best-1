@@ -3,7 +3,6 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
@@ -22,8 +21,7 @@ function NavbarComp(args) {
       <Navbar {...args}>
       <div>
       </div>
-      <appname className="headertext">Mummy Tinder</appname>
-        {/* <NavbarBrand className="app-body" href="/">Mummy Tinder</NavbarBrand> */}
+      <div className="headertext">Mummy Tinder</div>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
@@ -39,7 +37,7 @@ function NavbarComp(args) {
               <DropdownToggle nav caret>
                 Options
               </DropdownToggle>
-              <DropdownMenu right>
+              <DropdownMenu end>
                 <DropdownItem>Option 1</DropdownItem>
                 <DropdownItem>Option 2</DropdownItem>
                 <DropdownItem divider />

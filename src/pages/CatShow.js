@@ -18,7 +18,6 @@ console.log(id)
           <CardText>
             {cat.enjoys}
           </CardText>
-
         </CardBody>
       </Card></div>
   )
