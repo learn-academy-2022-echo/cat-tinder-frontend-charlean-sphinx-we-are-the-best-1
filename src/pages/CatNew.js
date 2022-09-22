@@ -1,23 +1,25 @@
 import React, {useState} from 'react'
 import { Form, FormGroup, Label, Input, Button} from 'reactstrap'
-import { useNavigate } from "react-router-dom"
+import { BrowserRouter, useNavigate } from 'react-router-dom'
 
-const CatNew = () => {
+const CatNew = ({ createCat }) => {
 
   const navigate = useNavigate()
+
   const [newCat, setNewCat] = useState({
     name: "",
     age: "",
+    location: "",
+    anthem:"",
+    movie:"",
     enjoys: "",
+    joke:"",
     image: ""
   })
 
   const handleCats = (e) => {
-    // console.log(e.target.name)
-    // console.log(e.target.value)
     setNewCat({...newCat, [e.target.name]: e.target.value})
     console.log(newCat)
-    // Pass the path you want to navigate as the argument 
   }
 
   const handleSubmit = () => {
@@ -26,8 +28,7 @@ const CatNew = () => {
   }
 
   console.log("newcat object", newCat)
-
-
+  
     return (
       <>
         <h2> Add a Mummy </h2>

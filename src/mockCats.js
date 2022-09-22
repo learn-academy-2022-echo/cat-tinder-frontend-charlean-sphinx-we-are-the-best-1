@@ -19,7 +19,7 @@ const cats = [
       movie: "Half-Baked",     
       enjoys: "Cream",
       joke: "chicken crossing road",
-      image: "https://static.wikia.nocookie.net/thundercats/images/c/c2/LionOFromThunderCats1985SeriesEpisodeTroubleWithTimeSc01.jpg/revision/latest?cb=20200331160007"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0B4qo_jSCNLYoEGOwWf_oJ5KcZc2MPz7a-Q&usqp=CAU"
     }, 
     {
       id: 3,
