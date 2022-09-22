@@ -16,7 +16,19 @@ console.log(id)
             { cat.name }, { cat.age}
           </CardTitle>
           <CardText>
+            {cat.location}
+          </CardText>
+          <CardText>
+            {cat.anthem}
+          </CardText>
+          <CardText>
+            {cat.movie}
+          </CardText>
+          <CardText>
             {cat.enjoys}
+          </CardText>
+          <CardText>
+            {cat.joke}
           </CardText>
         </CardBody>
       </Card></div>
