@@ -1,8 +1,25 @@
 import React from 'react'
-
-const CatShow = () => {
+import { useParams } from "react-router-dom"
+import { Card, CardBody, CardImg, CardText, CardTitle } from 'reactstrap'
+const CatShow = ({cats}) => {
+ const { id } = useParams()
+ const cat = cats.find((cat) => cat.id === +id)
+console.log(id)
   return (
-    <div>CatShow</div>
+    <div className='CatShow'><Card className="my-2">
+        <img
+          alt="Card image cap"
+          src={cat.image}
+        />
+        <CardBody>
+          <CardTitle tag="h5">
+            { cat.name }, { cat.age}
+          </CardTitle>
+          <CardText>
+            {cat.enjoys}
+          </CardText>
+        </CardBody>
+      </Card></div>
   )
 }
 
