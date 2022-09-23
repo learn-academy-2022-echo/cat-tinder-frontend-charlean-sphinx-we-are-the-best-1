@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css';
 import Footer from './components/Footer'
 import Header from './components/Header'
@@ -13,11 +13,33 @@ import mockCats from './mockCats.js'
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600;800&display=swap" rel="stylesheet"/>
 
 const App = () => {
+  const [cats, setCats] = useState([])
 
-  const [cats, setCats] = useState(mockCats)
-  const createCat = (cat) => {
-    console.log("Mummy has been created", cat)
+  const readCat = () => {
+    fetch("http://localhost:3000/cats")
+      .then((response) => response.json())
+      .then((payload) => setCats(payload))
+      .catch((error) => console.log(error))
   }
+
+  useEffect(() => {
+    readCat()
+  }, [])
+
+  const createCat = (cat) => {
+   
+    fetch('http://localhost:3000/cats', {
+      body: JSON.stringify(cat),
+      headers: {
+        'Content-Type':'application/json'
+      },
+      method: 'POST'
+    })
+    .then(response => response.json())
+    .then(payload => readCat())
+    .catch(errors => console.log(errors))
+  }
+  
   return (
     <>
       <Header />

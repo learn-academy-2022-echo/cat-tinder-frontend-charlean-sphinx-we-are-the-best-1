@@ -9,7 +9,7 @@ const Home = () => {
       <br />
       <h3>We like to keep it under wraps</h3>
       <br />
-      <h3>Its free to sign up, no need for crypt-ocurrency</h3>
+      <h3>Its free to sign up, no need for crypto-currency</h3>
       <br />
       <div className='sub-div'>
       <img src="photos/footer.png" alt='empty sarcophaugus'/>
