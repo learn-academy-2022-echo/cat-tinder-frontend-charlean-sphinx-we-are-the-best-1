@@ -16,14 +16,14 @@ const CatEdit = ({cats, updateCat}) => {
   const currentCat = cats?.find((cat) => cat.id === +id)
 
   const [editCat, setEditCat] = useState({
-    name: "",
-    age: "",
-    location: "",
-    anthem:"",
-    movie:"",
-    enjoys: "",
-    joke:"",
-    image: ""
+    name: currentCat.name,
+    age: currentCat.age,
+    location: currentCat.location,
+    anthem: currentCat.anthem,
+    movie: currentCat.movie,
+    enjoys: currentCat.enojoys,
+    joke: currentCat.joke,
+    image: currentCat.image
   })
 
 

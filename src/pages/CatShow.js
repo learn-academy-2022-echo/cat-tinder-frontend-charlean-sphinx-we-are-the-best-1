@@ -1,6 +1,7 @@
 import React from 'react'
-import { useParams } from "react-router-dom"
-import { Card, CardBody, CardImg, CardText, CardTitle } from 'reactstrap'
+import { useParams, NavLink } from "react-router-dom"
+import { Card, CardBody, CardImg, CardText, CardTitle, Button } from 'reactstrap'
+
 const CatShow = ({cats}) => {
  const { id } = useParams()
  const cat = cats.find((cat) => cat.id === +id)
@@ -30,6 +31,11 @@ console.log(id)
           <CardText>
             {cat.joke}
           </CardText>
+            <NavLink to={`/catedit/${cat.id}`} className="nav-link">
+            <Button>
+            See more details
+            </Button>
+            </NavLink>
         </CardBody>
       </Card></div>
   )
