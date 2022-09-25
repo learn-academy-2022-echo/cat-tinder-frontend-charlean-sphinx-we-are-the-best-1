@@ -3,7 +3,14 @@ fonts link
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Cinzel:wght@400;600;800&display=swap" rel="stylesheet">
 
+<!-- Install react-icons using 
+yarn add react-icons --save
+ -->
 
+
+ <!-- Added the navbar, so your old header is gone trying to figure it out -->
+ <!-- Tried to complete the edit, but its not showing up -->
+ <!-- Also aligned the stuff on catindex, needs some more css i think -->
 
 
 

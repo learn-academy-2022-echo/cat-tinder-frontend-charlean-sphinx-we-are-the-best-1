@@ -32,8 +32,8 @@ const CatNew = ({ createCat }) => {
     return (
       <>
         <h2> Add a Mummy </h2>
-        <Form>
-          <FormGroup>
+        <div className='formStyling'>
+        <FormGroup className='formgroup'>
             <Label for="name">Mummy's Name</Label>
             <Input
               name="name"
@@ -42,8 +42,7 @@ const CatNew = ({ createCat }) => {
               onChange={handleCats}
               value={newCat.name}
             />
-          </FormGroup>
-          <FormGroup>
+            <br></br>
             <Label for="age">Age</Label>
             <Input
               name="age"
@@ -52,8 +51,7 @@ const CatNew = ({ createCat }) => {
               onChange={handleCats}
               value={newCat.age}
             />
-          </FormGroup>
-          <FormGroup>
+            <br></br>
             <Label for="location">Tomb Location</Label>
             <Input
               name="location"
@@ -62,8 +60,7 @@ const CatNew = ({ createCat }) => {
               onChange={handleCats}
               value={newCat.location}
             />
-          </FormGroup>
-          <FormGroup>
+            <br></br>
             <Label for="anthem">Anthem</Label>
             <Input
               name="anthem"
@@ -72,8 +69,7 @@ const CatNew = ({ createCat }) => {
               onChange={handleCats}
               value={newCat.anthem}
             />
-          </FormGroup>
-          <FormGroup>
+            <br></br>
             <Label for="movie">Favorite Movie</Label>
             <Input
               name="movie"
@@ -82,8 +78,7 @@ const CatNew = ({ createCat }) => {
               onChange={handleCats}
               value={newCat.movie}
             />
-          </FormGroup>
-          <FormGroup>
+            <br></br>
             <Label for="enjoys">Hobbies</Label>
             <Input
               name="enjoys"
@@ -92,8 +87,7 @@ const CatNew = ({ createCat }) => {
               onChange={handleCats}
               value={newCat.enjoys}
             />
-          </FormGroup>
-          <FormGroup>
+            <br></br>
             <Label for="joke">Favorite Joke</Label>
             <Input
               name="joke"
@@ -102,8 +96,7 @@ const CatNew = ({ createCat }) => {
               onChange={handleCats}
               value={newCat.joke}
             />
-          </FormGroup>
-          <FormGroup>
+            <br></br>
             <Label for="image">Mummy Profile</Label>
             <Input
               name="image"
@@ -112,14 +105,15 @@ const CatNew = ({ createCat }) => {
               onChange={handleCats}
               value={newCat.image}
             />
-          </FormGroup>
+            <br></br>
           <Button
             onClick={handleSubmit}
             name="submit"
           >
             Submit
           </Button>
-        </Form>
+        </FormGroup>
+        </div>
       </>
     )
   }
