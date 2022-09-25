@@ -16,9 +16,18 @@ const App = () => {
   const [cats, setCats] = useState([])
 
   const updateCat = (cat, id) => {
-    console.log("cat:", cat)
-    console.log("id:", id)
+    fetch(`http://localhost:3000/cats/${id}`,{
+      body: JSON.stringify(cat),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+    .then(response => response.json())
+    .then(payload => readCat(payload))
+    .catch(errors => console.log("Cat update errors: ", errors))
   }
+
 
   const readCat = () => {
     fetch("http://localhost:3000/cats")
