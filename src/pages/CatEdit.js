@@ -9,15 +9,13 @@ import {  useNavigate, useParams } from 'react-router-dom'
 // and then i want to submit it as an update/edit but not change the primary key id
 
 
-const CatEdit = ({thisCat,editCat}) => {
+const CatEdit = ({cats, updateCat}) => {
 
   const { id } = useParams()
 
-  const allCats = thisCat.find((cat) => cat.id === +id)
+  const currentCat = cats?.find((cat) => cat.id === +id)
 
-  const navigate = useNavigate()
-
-  const [updateCat, setUpdateCat] = useState({
+  const [editCat, setEditCat] = useState({
     name: "",
     age: "",
     location: "",
@@ -30,12 +28,12 @@ const CatEdit = ({thisCat,editCat}) => {
 
 
   const handleCats = (e) => {
-    setUpdateCat({...updateCat, [e.target.name]: e.target.value})
-    console.log(updateCat)
+    setEditCat({...editCat, [e.target.name]: e.target.value})
   }
+  const navigate = useNavigate()
 
   const handleSubmit = () => {
-    editCat(updateCat, allCats.id)
+    updateCat(editCat, currentCat.id)
     navigate("/catindex")
   }
   return (
@@ -47,10 +45,10 @@ const CatEdit = ({thisCat,editCat}) => {
             <Label for="name">Mummy's Name</Label>
             <Input
               name="name"
-              placeholder = "src={cat.image}"
+              placeholder = "First-name? Pharoah-name? Nick-name? Screen-name? We dont care, just give us a name!"
               type="text"
               onChange={handleCats}
-              value={setUpdateCat.name}
+              value={editCat.name}
             />
           </FormGroup>
           <FormGroup>
@@ -60,7 +58,7 @@ const CatEdit = ({thisCat,editCat}) => {
               placeholder="AGE...d like a fine wine, heck yes you did. Lets count them crows feet like tree rings. How old are? "
               type="number"
               onChange={handleCats}
-              value={setUpdateCat.age}
+              value={editCat.age}
             />
           </FormGroup>
           <FormGroup>
@@ -70,7 +68,7 @@ const CatEdit = ({thisCat,editCat}) => {
               placeholder="Museuem of Natural History? Secret pyramid burried under sand?"
               type="text"
               onChange={handleCats}
-              value={setUpdateCat.location}
+              value={editCat.location}
             />
           </FormGroup>
           <FormGroup>
@@ -80,7 +78,7 @@ const CatEdit = ({thisCat,editCat}) => {
               placeholder="Its in every playlist, you know every word. What song is your anthem?"
               type="text"
               onChange={handleCats}
-              value={setUpdateCat.anthem}
+              value={editCat.anthem}
             />
           </FormGroup>
           <FormGroup>
@@ -90,7 +88,7 @@ const CatEdit = ({thisCat,editCat}) => {
               placeholder="You wanna Netflix and Chill dont you? If nothing else in your profile turned them on, this will for sure... Whats your favorite film?"
               type="text"
               onChange={handleCats}
-              value={setUpdateCat.movie}
+              value={editCat.movie}
             />
           </FormGroup>
           <FormGroup>
@@ -100,7 +98,7 @@ const CatEdit = ({thisCat,editCat}) => {
               placeholder="Board games? Ping-Pong? Draw pictures on the wall with your sevants blood? What hobbies do you have?"
               type="text"
               onChange={handleCats}
-              value={setUpdateCat.enjoys}
+              value={editCat.enjoys}
             />
           </FormGroup>
           <FormGroup>
@@ -110,7 +108,7 @@ const CatEdit = ({thisCat,editCat}) => {
               placeholder="Nothing is funnier than you sex life, but its worth a shot. Whats your best joke?"
               type="text"
               onChange={handleCats}
-              value={setUpdateCat.joke}
+              value={editCat.joke}
             />
           </FormGroup>
           <FormGroup>
@@ -120,7 +118,7 @@ const CatEdit = ({thisCat,editCat}) => {
               placeholder="Whoops stole your soul. haha just kidding, upload a photo, try to not have glasses on, and smile, lets see them pearly whites."
               type="url"
               onChange={handleCats}
-              value={setUpdateCat.image}
+              value={editCat.image}
             />
           </FormGroup>
           <Button
