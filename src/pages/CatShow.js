@@ -37,7 +37,9 @@ console.log(id)
             </Button>
             </NavLink>
         </CardBody>
-      </Card></div>
+      </Card>
+      <br></br>
+      </div>
   )
 }
 
