@@ -115,6 +115,9 @@ const CatEdit = ({cats, updateCat}) => {
           </Button>
         </Form>
       </>
+      <br></br>
+      <br></br>
+      <br></br>
       </div>
   )
 }

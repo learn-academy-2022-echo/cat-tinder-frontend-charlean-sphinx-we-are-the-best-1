@@ -98,7 +98,7 @@ footer {
 .formgroup{
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 600px;
 
 }
 
@@ -135,3 +135,8 @@ p {
   
 }
 
+.catimg{
+  max-width: 500px;
+  max-height:500px;
+  bottom:0;
+}

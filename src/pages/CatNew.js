@@ -37,7 +37,7 @@ const CatNew = ({ createCat }) => {
             <Label for="name">Mummy's Name</Label>
             <Input
               name="name"
-              placeholder="First-name? Pharoah-name? Nick-name? Screen-name? We dont care, just give us a name!"
+              placeholder="First-name? Pharoah-name? Nick-name? Screen-name?"
               type="text"
               onChange={handleCats}
               value={newCat.name}
@@ -46,7 +46,7 @@ const CatNew = ({ createCat }) => {
             <Label for="age">Age</Label>
             <Input
               name="age"
-              placeholder="AGE...d like a fine wine, heck yes you did. Lets count them crows feet like tree rings. How old are? "
+              placeholder="AGE...d like a fine wine. Lets count them crows feet like tree rings."
               type="number"
               onChange={handleCats}
               value={newCat.age}
@@ -73,7 +73,7 @@ const CatNew = ({ createCat }) => {
             <Label for="movie">Favorite Movie</Label>
             <Input
               name="movie"
-              placeholder="You wanna Netflix and Chill dont you? If nothing else in your profile turned them on, this will for sure... Whats your favorite film?"
+              placeholder="You wanna Netflix and Chill dont you? Whats your favorite film?"
               type="text"
               onChange={handleCats}
               value={newCat.movie}
@@ -82,7 +82,7 @@ const CatNew = ({ createCat }) => {
             <Label for="enjoys">Hobbies</Label>
             <Input
               name="enjoys"
-              placeholder="Board games? Ping-Pong? Draw pictures on the wall with your sevants blood? What hobbies do you have?"
+              placeholder="Board games? Ping-Pong? Draw pictures on the wall with your sevants blood?"
               type="text"
               onChange={handleCats}
               value={newCat.enjoys}
@@ -97,10 +97,10 @@ const CatNew = ({ createCat }) => {
               value={newCat.joke}
             />
             <br></br>
-            <Label for="image">Mummy Profile</Label>
+            <Label for="image">Profile Picture</Label>
             <Input
               name="image"
-              placeholder="Whoops stole your soul. haha just kidding, upload a photo, try to not have glasses on, and smile, lets see them pearly whites."
+              placeholder="Whoops stole your soul. haha just kidding, lets see them pearly whites. img url?"
               type="url"
               onChange={handleCats}
               value={newCat.image}
@@ -114,6 +114,9 @@ const CatNew = ({ createCat }) => {
           </Button>
         </FormGroup>
         </div>
+        <br></br>
+        <br></br>
+        <br></br>
       </>
     )
   }

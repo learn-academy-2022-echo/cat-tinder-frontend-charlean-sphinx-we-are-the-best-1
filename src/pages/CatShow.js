@@ -7,7 +7,7 @@ const CatShow = ({cats}) => {
  const cat = cats.find((cat) => cat.id === +id)
 console.log(id)
   return (
-    <div className='CatShow'><Card className="my-2">
+    <div className='CatShow'><Card className="catimg">
         <img
           alt="Card cap"
           src={cat.image}
@@ -39,6 +39,9 @@ console.log(id)
             </NavLink>
         </CardBody>
       </Card>
+      <br></br>
+      <br></br>
+      <br></br>
       <br></br>
       </div>
   )
