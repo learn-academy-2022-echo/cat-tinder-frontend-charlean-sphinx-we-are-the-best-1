@@ -26,7 +26,6 @@ const CatEdit = ({cats, updateCat}) => {
     image: currentCat.image
   })
 
-
   const handleCats = (e) => {
     setEditCat({...editCat, [e.target.name]: e.target.value})
   }
@@ -37,11 +36,11 @@ const CatEdit = ({cats, updateCat}) => {
     navigate("/catindex")
   }
   return (
-    <div className='Update'>
     <>
-        <h2> Add a Mummy </h2>
+        <h2> Edit your Mummy </h2>
+        <div className='imcenter'>
         <Form>
-          <FormGroup>
+          <FormGroup className="formgroup">
             <Label for="name">Mummy's Name</Label>
             <Input
               name="name"
@@ -114,11 +113,12 @@ const CatEdit = ({cats, updateCat}) => {
             Update
           </Button>
         </Form>
+        </div>
+      <br></br>
+      <br></br>
+      <br></br>
       </>
-      <br></br>
-      <br></br>
-      <br></br>
-      </div>
+    
   )
 }
 

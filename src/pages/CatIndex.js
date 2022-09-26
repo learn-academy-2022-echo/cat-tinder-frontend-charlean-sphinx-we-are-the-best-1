@@ -4,17 +4,21 @@ import { NavLink } from 'react-router-dom'
 
 const CatIndex = ({ cats }) => {
   return (
-    <main>
+    <main >
+            <h1 className='headertext imcenter'>Mummy Tinder</h1>
+      <div className='margins CatShow'>
       {cats.map((cat, index) => {
         return (
+          
           <div className='cat-index-cards'>
-                    <Card 
+                    <Card className="indeximg"
                       style={{ width: '18rem'}}
                       key={index}>
                       <img alt="Sample"
                       src={cat.image}
+                      className="indeximgs"
                       />
-                      <CardBody>
+                      <CardBody className='indextext'>
                         <CardTitle tag="h5">
                           {cat.name}
                         </CardTitle>
@@ -25,9 +29,11 @@ const CatIndex = ({ cats }) => {
                         </NavLink>
                       </CardBody>
                     </Card>
+          
           </div>
         ) 
       })}
+      </div>
     </main>
   )
 }
