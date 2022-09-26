@@ -37,7 +37,7 @@ const CatEdit = ({cats, updateCat}) => {
     navigate("/catindex")
   }
   return (
-
+    <div className='Update'>
     <>
         <h2> Add a Mummy </h2>
         <Form>
@@ -50,8 +50,6 @@ const CatEdit = ({cats, updateCat}) => {
               onChange={handleCats}
               value={editCat.name}
             />
-          </FormGroup>
-          <FormGroup>
             <Label for="age">Age</Label>
             <Input
               name="age"
@@ -60,8 +58,6 @@ const CatEdit = ({cats, updateCat}) => {
               onChange={handleCats}
               value={editCat.age}
             />
-          </FormGroup>
-          <FormGroup>
             <Label for="location">Tomb Location</Label>
             <Input
               name="location"
@@ -70,8 +66,6 @@ const CatEdit = ({cats, updateCat}) => {
               onChange={handleCats}
               value={editCat.location}
             />
-          </FormGroup>
-          <FormGroup>
             <Label for="anthem">Anthem</Label>
             <Input
               name="anthem"
@@ -80,8 +74,6 @@ const CatEdit = ({cats, updateCat}) => {
               onChange={handleCats}
               value={editCat.anthem}
             />
-          </FormGroup>
-          <FormGroup>
             <Label for="movie">Favorite Movie</Label>
             <Input
               name="movie"
@@ -90,8 +82,6 @@ const CatEdit = ({cats, updateCat}) => {
               onChange={handleCats}
               value={editCat.movie}
             />
-          </FormGroup>
-          <FormGroup>
             <Label for="enjoys">Hobbies</Label>
             <Input
               name="enjoys"
@@ -100,8 +90,6 @@ const CatEdit = ({cats, updateCat}) => {
               onChange={handleCats}
               value={editCat.enjoys}
             />
-          </FormGroup>
-          <FormGroup>
             <Label for="joke">Favorite Joke</Label>
             <Input
               name="joke"
@@ -110,8 +98,6 @@ const CatEdit = ({cats, updateCat}) => {
               onChange={handleCats}
               value={editCat.joke}
             />
-          </FormGroup>
-          <FormGroup>
             <Label for="image">Mummy Profile</Label>
             <Input
               name="image"
@@ -125,10 +111,11 @@ const CatEdit = ({cats, updateCat}) => {
             onClick={handleSubmit}
             name="submit"
           >
-            Submit
+            Update
           </Button>
         </Form>
       </>
+      </div>
   )
 }
 

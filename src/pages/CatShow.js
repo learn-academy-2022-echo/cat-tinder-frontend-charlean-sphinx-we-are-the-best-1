@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams, NavLink } from "react-router-dom"
-import { Card, CardBody, CardImg, CardText, CardTitle, Button } from 'reactstrap'
+import { Card, CardBody, CardText, CardTitle, Button } from 'reactstrap'
 
 const CatShow = ({cats}) => {
  const { id } = useParams()
@@ -9,7 +9,7 @@ console.log(id)
   return (
     <div className='CatShow'><Card className="my-2">
         <img
-          alt="Card image cap"
+          alt="Card cap"
           src={cat.image}
         />
         <CardBody>
@@ -17,23 +17,24 @@ console.log(id)
             { cat.name }, { cat.age}
           </CardTitle>
           <CardText>
-            {cat.location}
+            
+            <p>Location: {cat.location}</p>
           </CardText>
           <CardText>
-            {cat.anthem}
+            <p>Anthem: {cat.anthem}</p>
           </CardText>
           <CardText>
-            {cat.movie}
+            <p>Favorite Movie: {cat.movie}</p>
           </CardText>
           <CardText>
-            {cat.enjoys}
+            <p>About: {cat.enjoys}</p>
           </CardText>
           <CardText>
-            {cat.joke}
+            <p>Joke: {cat.joke}</p>
           </CardText>
             <NavLink to={`/catedit/${cat.id}`} className="nav-link">
             <Button>
-            See more details
+            Edit Profile
             </Button>
             </NavLink>
         </CardBody>
